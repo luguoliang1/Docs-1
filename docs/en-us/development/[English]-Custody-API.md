@@ -1,35 +1,25 @@
 # Getting Started
-
 KeyShard custody service provides the advanced technology and the architecture to secure crypto assets. 
 
 KeyShard provides the framework to create wallet, which is controlled by two or multiple participants. Access control is managed by the Quorum Policy for all of the Participants. The underlying framework is based on threshold signature, which is a specific protocol of secure multi-party computation.
 
 # Pre-requisites
-
 ## For Linux:
-
-Hardware:
+Hardware
 - CPU: 2.0 GHz 64-bit (Intel, AMD)
 - RAM: 2 GB
 - Disk space: 200 MB
 
-OS:
-- Linux RHEL/CentOS 7.2 and later
+OS
+- ubuntu 16.04/CentOS 7.4 and later
+
 Platform
 - GCC 5.4.0 or newer
 - Oracle Java 64-bit JVM 8 or newer
 - JDK 1.8.0 or newer
 
-## ubuntu
-
-* gcc version greater than or equal to 5.4.0
-* jdk version greater than or equal to 1.8.0
-* download librarys, unzip. config LD_LIBRARY_PATH to unzip path.
-* config /etc/hosts, add the follow record
-192.168.16.100       testks.platon.network
 
 # Java
-
 ## Package Details
 
 1. Get KeyShard SDK package (Please contact us from the homepage);
@@ -37,15 +27,19 @@ Platform
 
 The Java package contains the following:
 
-- bin - libraries that are dependencies for the Java files.
+- lib - libraries that are dependencies for the Java files.
 - docs - HTML descriptions of the APIs.
 - jar - contains the Keyshard SDK Java code.
 - sample - sample code.
 
+Config:
+
+- config  lib path in LD_LIBRARY_PATH
+- config "192.168.16.100 testks.platon.network" in /etc/hosts 
+
+
 ## Usage
-
 ### Initialize Keyshard SDK
-
 The main entry to the KeyShard SDK for Java is the class com.platon.keyshard.client.KeyShardSDK.
 
 Use its instance function to get a singleton instance to work with:
@@ -58,7 +52,6 @@ Returns:
 - The instance of the SDK
 
 Example:
-
 ```java
 KeyShardSDK keyshard = KeyShardSDK.getInstance();
 ```
@@ -74,7 +67,6 @@ Replace STORAGE_URL with the path of private key share will be stored by client
 You must check the return status to determine if this initialized successfully.
 
 ### Init Wallet
-
 A KeyShard participant can be a participant of several wallets. When creating a new wallet on the KeyShard server, the relevant participants are added to the wallet according to policy.
 
 ```java
@@ -90,7 +82,7 @@ enum Policy {
 	KEYSHARD23("2-3")
 }
 
-public int intWallet(Participant participant, Policy policy, String walletName, String coinType)
+public int initWallet(Participant participant, Policy policy, String walletName, String coinType)
 ```
 
 Parameters:
@@ -105,13 +97,12 @@ Returns:
 For example:
 
 ```java
-int walletId = keyshard.intWallet(participant, KEYSHARD22, "platon", "Energon");
+int walletId = keyshard.initWallet(participant, KEYSHARD22, "platon", "Energon");
 ```
 
 ### Join Wallet
-
-When one participant requests to generate wallet key-pair,  the relevant participants must be added to the wallet ,and KeyShard server will notify  relevant participants to approve operations.
-Once all relevant participants approve the request, KeyShard will start the process of creating a new wallet key-pair,(each participant has its own private key share,but public key is same )
+When one participant requests to generate wallet key-pair,KeyShard server will notify relevant participants to approve operations.
+Once all relevant participants approve the request, KeyShard will start the process of creating a new wallet key-pair(each participant has its own private key share,but public key is same ).
 
 To generate wallet key-pair, KeyshardSDK provide the joinWallet method:
 
@@ -145,13 +136,11 @@ Parameters:
 - listener - completion listener
 
 ### Wallet transfer
-
 KeyShard provides a multi-participant (quorum) transfering API, used to sign transaction.
 To enhance security, transfer transactions are verified on the participant's device, If verification fails, then the SDK returns an error and the transfer is halted.
 
 
 To transfer wallet balance , KeyshardSDK provide the applyTransfer method:
-
 ```java
 public void applyTransfer(int walletId, String toAddress, BigInteger amount,
 keyshardSdk.CompletionListener listener)
