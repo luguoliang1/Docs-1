@@ -1,2 +1,2 @@
  - Development
-	- [Custody API](en-us/development/[English]-Keyshard API)
+	- [Keyshard API](en-us/development/[English]-Custody API)
