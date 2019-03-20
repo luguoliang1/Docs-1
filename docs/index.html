@@ -25,11 +25,13 @@
     <a href="https://www.baidu.com/" rel = "nofollow" target = "_blank" title = "小z博客">developers</a> 
     <a href="https://www.baidu.com/" rel="external nofollow" target = "_blank"  rel = "nofollow" target = "_blank" title = "IPinfo">developers</a> 
   </navbar> -->
+
   <script>
     window.$docsify = {
       navbar:true,
 	  // name: '<img src="assets/Group.svg" data-origin="assets/logo.png" alt="Style Dictionary logo" class="sidebar-logo">Style Dictionary',
-	  coverpage: false,
+	  
+      coverpage: false,
 	  auto2top: false,
 	  autoHeader: true,
 	  loadNavbar: true,
@@ -43,6 +45,14 @@
           readyTransition : true, // default
           responsiveTables: true  // default
       },
+	  
+	  alias: {	
+      '/': '/en-us/development/[English]-Custody-API.md',
+	  '/en-us/':'/en-us/development/[English]-Custody-API.md',
+
+	  '/zh-cn/development/':'/zh-cn/development/[Chinese-Simplified]-Custody-API.md',
+	  '/zh-cn/':'/zh-cn/development/[Chinese-Simplified]-Custody-API.md',
+	 },
 
 
 	// 完整配置参数
