@@ -1,44 +1,60 @@
-# Getting Started
+#KeyShard Custody Services
 KeyShard custody service provides the advanced technology and the architecture to secure crypto assets. 
 
 KeyShard provides the framework to create wallet, which is controlled by two or multiple participants. Access control is managed by the Quorum Policy for all of the Participants. The underlying framework is based on threshold signature, which is a specific protocol of secure multi-party computation.
 
-# Pre-requisites
-## For Linux:
-Hardware
+# Getting Started
+Integrating KeyShard services within your application, such as an exchange, a token fund, or any other application managing crypto assets.
+
+This reference includes operations including: 
+ 
+1. Creating accounts 
+2. Transfer coins
+
+## Supported Coins
+* Energon - [PlatON Testnet](platon.network)
+
+More coins will be supported soon.
+
+
+## Pre-requisites
+
+Linux platform is supported. SDKs for other platform are coming soon.
+### Linux:
+####Hardware
 - CPU: 2.0 GHz 64-bit (Intel, AMD)
 - RAM: 2 GB
 - Disk space: 200 MB
 
-OS
+####OS
 - ubuntu 16.04/CentOS 7.4 and later
 
-Platform
-- GCC 4.8.5-36 or newer
-- 64-bit JDK 1.8.0 or newer
+####Platform
+- GCC 5.4.0 or newer
+- Oracle Java 64-bit JVM 8 or newer
+- JDK 1.8.0 or newer
 
 
-# Java
-## Package Details
+### Java API
 
-1. Get KeyShard SDK package (Please contact us from the homepage);
+1. Get KeyShard API SDK package (Please contact us from the homepage);
 2. Decompress the package.
 
-The Java package contains the following:
+#### Package Details
 
 - lib - libraries that are dependencies for the Java files.
 - docs - HTML descriptions of the APIs.
 - jar - contains the Keyshard SDK Java code.
 - sample - sample code.
 
-Config:
+####Config:
 
 - config  lib path in LD_LIBRARY_PATH
 - config "192.168.16.100 testks.platon.network" in /etc/hosts 
 
 
-## Usage
-### Initialize Keyshard SDK
+### Usage
+#### Initialize Keyshard SDK
 The main entry to the KeyShard SDK for Java is the class com.platon.keyshard.client.KeyShardSDK.
 
 Use its instance function to get a singleton instance to work with:
@@ -65,7 +81,7 @@ Replace STORAGE_URL with the path of private key share will be stored by client
 
 You must check the return status to determine if this initialized successfully.
 
-### Init Wallet
+#### Init Wallet
 A KeyShard participant can be a participant of several wallets. When creating a new wallet on the KeyShard server, the relevant participants are added to the wallet according to policy.
 
 ```java
@@ -99,7 +115,7 @@ For example:
 int walletId = keyshard.initWallet(participant, KEYSHARD22, "platon", "Energon");
 ```
 
-### Join Wallet
+#### Join Wallet
 When one participant requests to generate wallet key-pair,KeyShard server will notify relevant participants to approve operations.
 Once all relevant participants approve the request, KeyShard will start the process of creating a new wallet key-pair(each participant has its own private key share,but public key is same ).
 
@@ -134,7 +150,7 @@ Parameters:
 - walletId - wallet ID to load
 - listener - completion listener
 
-### Wallet transfer
+#### Wallet Transfer
 KeyShard provides a multi-participant (quorum) transfering API, used to sign transaction.
 To enhance security, transfer transactions are verified on the participant's device, If verification fails, then the SDK returns an error and the transfer is halted.
 
