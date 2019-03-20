@@ -3,7 +3,7 @@
 ## KeyShard Custody Services
 KeyShard custody service provides the advanced technology and the architecture to secure crypto assets. 
 
-KeyShard provides the framework to create wallet, which is controlled by two or multiple participants. Access control is managed by the Quorum Policy for all of the Participants. The underlying framework is based on threshold signature, which is a specific protocol of secure multi-party computation.
+KeyShard provides the framework to create wallet, which is controlled by two or multiple participants. Access control is managed by the Quorum Policy for all of the participants. The underlying framework is based on threshold signature, which is a specific protocol of secure multi-party computation.
 
 ## Getting Started
 Integrating KeyShard services within your application, such as an exchange, a token fund, or any other application managing crypto assets.
