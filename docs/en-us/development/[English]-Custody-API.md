@@ -14,9 +14,8 @@ OS
 - ubuntu 16.04/CentOS 7.4 and later
 
 Platform
-- GCC 5.4.0 or newer
-- Oracle Java 64-bit JVM 8 or newer
-- JDK 1.8.0 or newer
+- GCC 4.8.5-36 or newer
+- 64-bit JDK 1.8.0 or newer
 
 
 # Java
