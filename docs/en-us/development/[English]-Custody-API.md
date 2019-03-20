@@ -1,13 +1,9 @@
-# KeyShard API
-
 # KeyShard Custody Services
-
 KeyShard custody service provides the advanced technology and the architecture to secure crypto assets. 
 
 KeyShard provides the framework to create wallet, which is controlled by two or multiple participants. Access control is managed by the Quorum Policy for all of the Participants. The underlying framework is based on threshold signature, which is a specific protocol of secure multi-party computation.
 
 # Getting Started
-
 Integrating KeyShard services within your application, such as an exchange, a token fund, or any other application managing crypto assets.
 
 This reference includes operations including: 
@@ -39,19 +35,19 @@ Linux platform is supported. SDKs for other platform are coming soon.
 - JDK 1.8.0 or newer
 
 
-### Java API
+## Java API
 
 1. Get KeyShard API SDK package (Please contact us from the homepage);
 2. Decompress the package.
 
-#### Package Details
+### Package Details
 
 - lib - libraries that are dependencies for the Java files.
 - docs - HTML descriptions of the APIs.
 - jar - contains the Keyshard SDK Java code.
 - sample - sample code.
 
-#### Config
+### Config
 
 - config  lib path in LD_LIBRARY_PATH
 - config "192.168.16.100 testks.platon.network" in /etc/hosts 
