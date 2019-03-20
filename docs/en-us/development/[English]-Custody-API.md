@@ -22,7 +22,7 @@ More coins will be supported soon.
 ## Pre-requisites
 
 Linux platform is supported. SDKs for other platform are coming soon.
-### Linux:
+### Linux
 #### Hardware
 - CPU: 2.0 GHz 64-bit (Intel, AMD)
 - RAM: 2 GB
