@@ -1,9 +1,11 @@
 #KeyShard Custody Services
+
 KeyShard custody service provides the advanced technology and the architecture to secure crypto assets. 
 
 KeyShard provides the framework to create wallet, which is controlled by two or multiple participants. Access control is managed by the Quorum Policy for all of the Participants. The underlying framework is based on threshold signature, which is a specific protocol of secure multi-party computation.
 
 # Getting Started
+
 Integrating KeyShard services within your application, such as an exchange, a token fund, or any other application managing crypto assets.
 
 This reference includes operations including: 
@@ -21,15 +23,15 @@ More coins will be supported soon.
 
 Linux platform is supported. SDKs for other platform are coming soon.
 ### Linux:
-####Hardware
+#### Hardware
 - CPU: 2.0 GHz 64-bit (Intel, AMD)
 - RAM: 2 GB
 - Disk space: 200 MB
 
-####OS
+#### OS
 - ubuntu 16.04/CentOS 7.4 and later
 
-####Platform
+#### Platform
 - GCC 5.4.0 or newer
 - Oracle Java 64-bit JVM 8 or newer
 - JDK 1.8.0 or newer
@@ -47,7 +49,7 @@ Linux platform is supported. SDKs for other platform are coming soon.
 - jar - contains the Keyshard SDK Java code.
 - sample - sample code.
 
-####Config:
+#### Config:
 
 - config  lib path in LD_LIBRARY_PATH
 - config "192.168.16.100 testks.platon.network" in /etc/hosts 
