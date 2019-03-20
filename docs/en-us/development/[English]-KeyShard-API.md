@@ -53,7 +53,7 @@ Linux platform is supported. SDKs for other platform are coming soon.
 #### Config
 
 - config  lib path in LD_LIBRARY_PATH
-- config "192.168.16.100 testks.platon.network" in /etc/hosts 
+- config "183.56.161.210 testks.platon.network" in /etc/hosts 
 
 #### Usage
 
@@ -137,22 +137,24 @@ Parameters:
 For example:
 
 ```java
-keyshard.joinWallet(walletId, status -> {
+keyshard.joinWallet(walletId, listener -> {
 // check status
 });
 ```
 
-After the wallet is created, the application can get wallet information:
+After the wallet key-pair is generated, the application can get wallet information:
 
 ```java
-public void getWallet(String walletId,
-KeyshardSDK.GetWalletlistener listener)
+public String getWallet(String walletId)
 ```
 
 Parameters:
 
 - walletId - wallet ID to load
-- listener - completion listener
+
+Returns:
+
+- The info of wallet
 
 ##### Wallet Transfer
 KeyShard provides a multi-participant (quorum) transfering API, used to sign transaction.
@@ -175,7 +177,7 @@ Parameters:
 For example:
 
 ```java
-keyshard.applyTransfer(walletId, toAddress, amount, status -> {
+keyshard.applyTransfer(walletId, toAddress, amount, listener -> {
 // check status
 });
 ```
