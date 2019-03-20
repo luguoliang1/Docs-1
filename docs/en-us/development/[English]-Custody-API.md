@@ -49,7 +49,7 @@ Linux platform is supported. SDKs for other platform are coming soon.
 - jar - contains the Keyshard SDK Java code.
 - sample - sample code.
 
-#### Config:
+#### Config
 
 - config  lib path in LD_LIBRARY_PATH
 - config "192.168.16.100 testks.platon.network" in /etc/hosts 
