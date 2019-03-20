@@ -81,7 +81,7 @@ Before using the KeyShard SDK you must initialize it with the following command:
 keyshard.init(STORAGE_URL);
 ```
 
-Replace STORAGE_URL with the path of private key share will be stored by client
+Replace STORAGE_URL with the path of private key share will be stored by client,it is relative path of of the current directory.
 
 You must check the return status to determine if this initialized successfully.
 
