@@ -6,8 +6,9 @@
     --sidebar-nav-link-background-color--active   : red;
     --sidebar-nav-link-background-color--hover    : red;
     --cus-color: #0B93E9;
-    --sidebar-nav-pagelink-background-image             : url('./assets/down.svg') no-repeat right center;
-    --sidebar-nav-pagelink-background-image--active     : url('./assets/up.svg') no-repeat 223px 17px;
+    --theme-color-secondary:#030418;
+    --sidebar-nav-pagelink-background-image             : url('./assets/icon_drop-down2.svg') no-repeat right center;
+    --sidebar-nav-pagelink-background-image--active     : url('./assets/icon_drop-down.svg') no-repeat 212px 14px ;
     
   }
 
@@ -18,7 +19,8 @@
     height: 50px;
     opacity: 1;
     /* background-image: linear-gradient(90deg, #211A56 0%, #004569 86%); */
-    background-image: linear-gradient(90deg, #004569 0%, #211A56 86%);
+    background:#030418;
+    /* background-image: linear-gradient(90deg, #004569 0%, #211A56 86%); */
 }
 .app-nav.no-badge{
     display: flex;
@@ -26,6 +28,7 @@
     color:#FFFFFF;
     align-items: center;
     flex-direction: row-reverse;
+    box-shadow: 0 -1px 0 0 #48506C, 0 1px 0 0 #48506C;
 }
 .app-nav li{
     /* color:#FFFFFF; */
@@ -43,7 +46,7 @@
     width: 150px;
     height: 30px;
     padding-left: 42px;
-    background: url('./assets/group.svg') no-repeat left center;
+    background: url('./assets/keyshard-logo.png') no-repeat left center;
     z-index: 2;
     font-size: 22px;
     color: #FFFFFF;
@@ -73,15 +76,24 @@
 .search .clear-button svg {
     transform: scale(1.0) !important;
 }
+.search .clear-button.show{
+    opacity:0;
+}
 .input-warp{
     height: 54px;
 }
+.search .input-wrap{
+    background: #030418;
+    box-shadow: 0 -1px 0 0 #48506C, 0 1px 0 0 #48506C;
+}
 .sidebar .search input{
-    padding: 8px 0 8px 72px;
-    border: 1px solid #6095C1;
+    margin: 10px 28px 10px 30px;
+    height: 30px;
+    border: 1px solid #48506C;
+    border-radius: 16px;
     border-left: 0;
     border-right: 0;
-    background: #083B65 url('./assets/search.svg') no-repeat 40px center;
+    background: #48506C;
 
 }
 .sidebar .sidebar-nav ul li.active>a{
@@ -90,11 +102,22 @@
 .sidebar ul{
     padding: 0 5px 0 40px;
 }
+/* .sidebar ul::before{
+    content:url('./assets/icon_Angle.svg')
+} */
+.sidebar .sidebar-nav>ul{
+    background: url(./assets/icon_Angle.svg) no-repeat 15px 12px;
+}
 .sidebar .sidebar-nav ul li.active>a {
     border-right-width: 0;
 }
 ::-webkit-input-placeholder{
-    color: #B2CEE5;
+    padding-left: 20px;
+    font-family: ArialMT;
+    font-size: 14px;
+    color: #9BA0BC;
+    letter-spacing: 0;
+    background: url(./assets/icon_search.svg) no-repeat left center
 }
 /* 响应式布局 */
 @media screen and (max-width:500px){
@@ -137,11 +160,25 @@
 } */
 
 /* 展开箭头 */
-/*.sidebar-nav li>a[href^="#/"]:not([href*="?id="]):only-child{
+/* .sidebar-nav li>a[href^="#/"]:not([href*="?id="]):only-child{
+    background: var(--sidebar-nav-pagelink-background-image);
+} */
+.sidebar-nav li>a[href^="#/"]:not([href*="?id="]):not(:only-child){
+    background: var(--sidebar-nav-pagelink-background-image--active);
+    
+}
+.sidebar-nav li.collapse>a[href^="#/"]:not([href*="?id="]):not(:only-child){
+    background: var(--sidebar-nav-pagelink-background-image);
+    
+}
+/* .sidebar-nav li.active.collapse{
     background: var(--sidebar-nav-pagelink-background-image);
 }
-.sidebar-nav li.active>a[href^="#/"]:not([href*="?id="]):not(:only-child){
+.sidebar-nav li.active{
     background: var(--sidebar-nav-pagelink-background-image--active);
+} */
+.sidebar-nav li.active>a[href^="#/"]:not([href*="?id="]):not(:only-child){
+    background: var(--sidebar-nav-pagelink-background-image);
 }
 
 .sidebar-nav li p>a[href^="#/"]:not([href*="?id="]):only-child{
@@ -150,21 +187,25 @@
 .sidebar-nav li p.active>a[href^="#/"]:not([href*="?id="]):not(:only-child){
     background: var(--sidebar-nav-pagelink-background-image--active);
 }
-*/
 
-/* .anchor::before{
+
+h2 .anchor::before{
     position: static;
-    display:block;
-    content:'';
+    /* display:block; */
+    content:url(./assets/icon_Angle.svg);
     width:100%;
     height:60px;
-} */
-
+    opacity: 1
+}
+.anchor::before{
+    content: '';
+}
 .markdown-section{
     font-size: 1rem;
 }
 .markdown-section a {
     color: var(--cus-color);
+    border-bottom: 0;
 }
 .sidebar-toggle{
     width: 56px
@@ -194,4 +235,11 @@
 }
 #main h3 a{
     border-bottom: 0; 
+}
+.markdown-section pre, .markdown-section pre > code{
+    font-family: ArialMT;
+    font-size: 14px;
+    color: #24272B;
+    text-align: left;
+    background-color:#F3F5FA;
 }
