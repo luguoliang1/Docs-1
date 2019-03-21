@@ -58,8 +58,8 @@ export LD_LIBRARY_PATH = {your_libs_path}
 ```
 - config keyshard server hosts  
 ```bash
-sudo vim /etc/hosts; 
-insert item “183.56.161.210 testks.platon.network”;
+sudo vim /etc/hosts
+insert item “183.56.161.210 testks.platon.network”
 ```
 #### Usage
 
