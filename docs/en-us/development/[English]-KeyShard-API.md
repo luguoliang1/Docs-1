@@ -10,7 +10,7 @@ Integrating custody services within your application, such as an exchange, a tok
 
 This reference includes operations including: 
  
-1. Creating accounts 
+1. Create accounts 
 2. Transfer coins
 
 ### Supported Coins
