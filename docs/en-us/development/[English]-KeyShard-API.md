@@ -8,7 +8,7 @@ KeyShard provides the framework to create wallet, which is controlled by two or 
 ## Getting Started
 Integrating custody services within your application, such as an exchange, a token fund, or any other application managing crypto assets, is accomplished with the KeyShard API.
 
-This reference includes operations including: 
+This reference includes operations: 
  
 1. Create accounts 
 2. Transfer coins
