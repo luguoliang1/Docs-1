@@ -52,9 +52,15 @@ Linux platform is supported. SDKs for other platform are coming soon.
 
 #### Config
 
-- config  your libs path in LD_LIBRARY_PATH (export LD_LIBRARY_PATH = {your_libs_path})
-- config "183.56.161.210 testks.platon.network" in /etc/hosts (sudo vim /etc/hosts; insert item "183.56.161.210 testks.platon.network";)
-
+- config  lib path in LD_LIBRARY_PATH
+```bash
+export LD_LIBRARY_PATH = {your_libs_path}
+```
+- config keyshard server hosts  
+```bash
+sudo vim /etc/hosts; 
+insert item “183.56.161.210 testks.platon.network”;
+```
 #### Usage
 
 ##### Initialize Keyshard SDK
