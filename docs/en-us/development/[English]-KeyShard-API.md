@@ -45,14 +45,14 @@ Linux platform is supported. SDKs for other platform are coming soon.
 
 #### Package Details
 
-- lib - libraries that are dependencies for the Java files.
+- libs - libraries that are dependencies for the Java files.
 - docs - HTML descriptions of the APIs.
 - jar - contains the Keyshard SDK Java code.
-- sample - sample code.
+- sample - sample bin.
 
 #### Config
 
-- config  lib path in LD_LIBRARY_PATH
+- config  your libs path in LD_LIBRARY_PATH (export  LD_LIBRARY_PATH = {your_libs})
 - config "183.56.161.210 testks.platon.network" in /etc/hosts 
 
 #### Usage
@@ -183,3 +183,43 @@ keyshard.applyTransfer(walletId, toAddress, amount, listener -> {
 ```
 
 After the minimum number of participants (as configured in the wallet policy) approve the transaction, threshold signing is ready for execution.
+
+## SAMPLE USAGE
+The following file are provided for the keyshard client in the sample folder:
+
+- KeyShardDemo.jar
+
+before execute the jar, config for libs must be effective
+
+### init wallet:
+
+java -jar KeyShardDemo.jar -e email -c platon -n batman -w valut
+
+Parameters:
+- e - participant email address
+- c - participant company name
+- n - participant name
+- w - wallet name
+
+Returns:
+
+- The id of wallet
+
+### join wallet
+
+java -jar KeyShardDemo.jar -i {walletId}
+
+Parameters:
+- i - the walletId which return in init wallet step
+
+Returns:
+- the wallet address
+
+### Wallet transfer
+java -jar KeyShardDemo.jar -i {walletId} -t 0x1e0b12ccb15a1c5cb6a1fdca9a7f599974ec04f4 -v 100000000000000
+
+Parameters:
+- i - the walletId which return in init wallet step
+- t - the address which the token transfer to
+- v - the amount of trasfer value 
+
