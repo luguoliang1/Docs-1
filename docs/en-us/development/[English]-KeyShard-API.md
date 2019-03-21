@@ -229,3 +229,6 @@ Parameters:
 - t - the address which the token transfer to
 - v - the amount of transfer  
 
+Returns:
+- the trasnfer transaction hash
+
