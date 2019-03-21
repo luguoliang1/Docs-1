@@ -52,8 +52,8 @@ Linux platform is supported. SDKs for other platform are coming soon.
 
 #### Config
 
-- config  your libs path in LD_LIBRARY_PATH (export  LD_LIBRARY_PATH = {your_libs})
-- config "183.56.161.210 testks.platon.network" in /etc/hosts 
+- config  your libs path in LD_LIBRARY_PATH (export LD_LIBRARY_PATH = {your_libs_path})
+- config "183.56.161.210 testks.platon.network" in /etc/hosts (sudo vim /etc/hosts; insert item "183.56.161.210 testks.platon.network";)
 
 #### Usage
 
@@ -193,7 +193,7 @@ before execute the jar, config for libs must be effective
 
 ### init wallet:
 
-java -jar KeyShardDemo.jar -e email -c platon -n batman -w valut
+java -jar KeyShardDemo.jar -e {your email} -c {your company} -n {your name} -w {wallet name}
 
 Parameters:
 - e - participant email address
@@ -216,10 +216,10 @@ Returns:
 - the wallet address
 
 ### Wallet transfer
-java -jar KeyShardDemo.jar -i {walletId} -t 0x1e0b12ccb15a1c5cb6a1fdca9a7f599974ec04f4 -v 100000000000000
+java -jar KeyShardDemo.jar -i {walletId} -t {recipientAddress} -v {transfer amount}
 
 Parameters:
 - i - the walletId which return in init wallet step
 - t - the address which the token transfer to
-- v - the amount of trasfer value 
+- v - the amount of transfer  
 
