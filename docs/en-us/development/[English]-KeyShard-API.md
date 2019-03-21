@@ -14,7 +14,7 @@ This reference includes operations including:
 2. Transfer coins
 
 ### Supported Coins
-* Energon - [PlatON Testnet](platon.network)
+* Energon - [PlatON Testnet](https://www.platon.network/#/)
 
 More coins will be supported soon.
 
