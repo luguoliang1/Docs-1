@@ -50,7 +50,7 @@ Linux platform is supported. SDKs for other platform are coming soon.
 - jar - contains the Keyshard SDK Jar(KeyShard.{version}-SDK.jar ).
 - sample - sample bin.
 
-#### Config
+##### Config
 
 - config  lib path in LD_LIBRARY_PATH
 ```bash
@@ -190,14 +190,14 @@ keyshard.applyTransfer(walletId, toAddress, amount, listener -> {
 
 After the minimum number of participants (as configured in the wallet policy) approve the transaction, threshold signing is ready for execution.
 
-## SAMPLE USAGE
+#### SAMPLE USAGE
 The following file are provided for the keyshard client in the sample folder:
 
 - KeyShard.{version}-Demo.jar
 
 before execute the jar, config for libs must be effective
 
-### Init wallet:
+##### Init wallet:
 
 ```bash
 java -jar KeyShard.{version}-Demo.jar -e {your email} -c {your company} -n {your name} -w {wallet name}
@@ -212,7 +212,7 @@ Returns:
 
 - The id of wallet
 
-### Join wallet
+##### Join wallet
 
 ```bash
 java -jar KeyShard.{version}-Demo.jar -i {walletId}
@@ -223,7 +223,7 @@ Parameters:
 Returns:
 - the wallet address
 
-### Wallet transfer
+##### Wallet transfer
 
 ```bash
 java -jar KeyShard.{version}-Demo.jar -i {walletId} -t {recipientAddress} -v {transfer amount}
