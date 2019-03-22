@@ -30,7 +30,7 @@ Linux platform is supported. SDKs for other platform are coming soon.
 - Disk space: 200 MB
 
 ##### OS
-- ubuntu 16.04/CentOS 7.4 and later
+- Ubuntu 16.04/CentOS 7.4 and later
 
 ##### Platform
 - GCC 5.4.0 or newer
@@ -47,7 +47,7 @@ Linux platform is supported. SDKs for other platform are coming soon.
 
 - libs - libraries that are dependencies for the Java files.
 - docs - HTML descriptions of the APIs.
-- jar - contains the Keyshard SDK Java code.
+- jar - contains the Keyshard SDK Jar(KeyShard.{version}-SDK.jar ).
 - sample - sample bin.
 
 #### Config
@@ -193,14 +193,15 @@ After the minimum number of participants (as configured in the wallet policy) ap
 ## SAMPLE USAGE
 The following file are provided for the keyshard client in the sample folder:
 
-- KeyShardDemo.jar
+- KeyShard.{version}-Demo.jar
 
 before execute the jar, config for libs must be effective
 
-### init wallet:
+### Init wallet:
 
-java -jar KeyShardDemo.jar -e {your email} -c {your company} -n {your name} -w {wallet name}
-
+```bash
+java -jar KeyShard.{version}-Demo.jar -e {your email} -c {your company} -n {your name} -w {wallet name}
+```
 Parameters:
 - e - participant email address
 - c - participant company name
@@ -211,10 +212,11 @@ Returns:
 
 - The id of wallet
 
-### join wallet
+### Join wallet
 
-java -jar KeyShardDemo.jar -i {walletId}
-
+```bash
+java -jar KeyShard.{version}-Demo.jar -i {walletId}
+```
 Parameters:
 - i - the walletId which return in init wallet step
 
@@ -222,8 +224,10 @@ Returns:
 - the wallet address
 
 ### Wallet transfer
-java -jar KeyShardDemo.jar -i {walletId} -t {recipientAddress} -v {transfer amount}
 
+```bash
+java -jar KeyShard.{version}-Demo.jar -i {walletId} -t {recipientAddress} -v {transfer amount}
+```
 Parameters:
 - i - the walletId which return in init wallet step
 - t - the address which the token transfer to
