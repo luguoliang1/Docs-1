@@ -230,5 +230,5 @@ Parameters:
 - v - the amount of transfer  
 
 Returns:
-- the trasnfer transaction hash
+- the transfer transaction hash
 
