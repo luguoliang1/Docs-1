@@ -61,6 +61,7 @@ export LD_LIBRARY_PATH = {your_libs_path}
 sudo vim /etc/hosts
 insert item “183.56.161.210 testks.platon.network”
 ```
+
 #### Usage
 
 ##### Initialize Keyshard SDK
