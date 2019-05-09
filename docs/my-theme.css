@@ -191,7 +191,7 @@
 
 h2 .anchor::before{
     position: static;
-    /* display:block; */
+    display:block;/*  */
     content:url(./assets/icon_Angle.svg);
     width:100%;
     height:60px;
