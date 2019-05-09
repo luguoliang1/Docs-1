@@ -189,7 +189,7 @@
 }
 
 
-h2 .anchor::before{
+/*h2*/ .anchor::before{
     position: static;
     display:block;/*  */
     content:url(./assets/icon_Angle.svg);
